@@ -12,6 +12,6 @@ urlpatterns = [
     path('dashboard/', index, name='dash'),
     path('search', search, name="search"),
     path('product/<int:id>/', product, name='product'),
-    path('', auth_view.LoginView.as_view(template_name='users/login.html'), name="login"),
-    path('logout/', auth_view.LogoutView.as_view(template_name='users/login.html'), name="logout"),
+    path('', auth_view.LoginView.as_view(template_name='users/index.html'), name="login"),
+    path('logout/', auth_view.LogoutView.as_view(template_name='users/index.html'), name="logout"),
 ]
